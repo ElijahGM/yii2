@@ -29,7 +29,12 @@ trait ActiveQueryTrait
      * of [[modelClass]] will be created to represent each record.
      */
     public $asArray;
-
+     /**
+     * @var Closure Iterate over a collection of objects, a modified object
+     * of [[modelClass]] or [[Array] if asArray() is invoked should be return.
+     * The closure receive one arguments, an object of [[modelClass]] or [[Array] if asArray() is called    
+     */
+    public $iterator_callback;
 
     /**
      * Sets the [[asArray]] property.
